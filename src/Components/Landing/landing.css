@@ -1,0 +1,159 @@
+.landing {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  position: relative;
+  scroll-marker-group: after;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .box {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, var(--mainColor), transparent);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 10;
+      h2 {
+        width: fit-content;
+        margin: 15px auto;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0px;
+          left: -30px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: var(--yellowColor);
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0px;
+          right: -30px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: var(--yellowColor);
+        }
+      }
+      > * {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.box::scroll-marker {
+  content: "";
+  width: 15px;
+  height: 15px;
+  @media (max-width: 776px) {
+    width: 23px;
+    height: 23px;
+  }
+  border-radius: 50%;
+  background-color: #fff1;
+  transition: 0.3s ease;
+}
+
+.landing::scroll-marker-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  position: absolute;
+  width: 500px;
+  @media (max-width: 772px) {
+    width: 350px;
+    flex-wrap: wrap;
+  }
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.box::scroll-marker:target-current {
+  background-color: var(--yellowColor);
+  width: 30px;
+  border-radius: 25px;
+}
+
+.landing::scroll-button(left),
+.landing::scroll-button(right) {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  backdrop-filter: blur(10px);
+  background-color: #1111;
+  border-radius: 50%;
+  backdrop-filter: blur(3px);
+  outline: none;
+  border: 2px solid var(--whiteColor);
+
+  color: var(--whiteColor);
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s ease;
+  z-index: 6;
+}
+.landing::scroll-button(right) {
+  font-family: "Font Awesome 5 Free";
+  content: "\F101";
+  font-weight: 900;
+  right: 10px;
+}
+.landing::scroll-button(left) {
+  font-family: "Font Awesome 5 Free";
+  content: "\F100";
+  font-weight: 900;
+  left: 10px;
+}
+
+.landing::scroll-button(left):disabled,
+.landing::scroll-button(right):disabled {
+  cursor: no-drop;
+  opacity: 0.5;
+}
+.landing::scroll-button(left):active,
+.landing::scroll-button(right):active {
+  scale: 0.95;
+}
+
+@media (max-width: 776px) {
+  .landing::scroll-button(left),
+  .landing::scroll-button(right) {
+    transform: translateY(0);
+    top: auto;
+    bottom: 150px;
+  }
+}

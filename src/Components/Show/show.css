@@ -1,0 +1,19 @@
+.show {
+  .box {
+    transition: 0.3s ease-in;
+    &:active {
+      scale: 0.95;
+    }
+    &:hover {
+      &::before {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+    &::before {
+      background: linear-gradient(to top, var(--mainColor), transparent);
+      bottom: 0;
+      transition: 0.2s ease-in;
+    }
+  }
+}
