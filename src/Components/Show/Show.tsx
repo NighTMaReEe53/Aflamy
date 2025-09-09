@@ -58,7 +58,7 @@ const Show = ({ name, URL }: IText) => {
                 src={`https://image.tmdb.org/t/p/original/${el.poster_path}`}
                 alt=""
                 draggable={false}
-                className="rounded-md w-[100%] min-h-[225px] md:h-[230px]"
+                className="rounded-md w-[100%] h-[180px] md:h-[230px]"
               />
               <span className="absolute top-[10px] left-[10px] font-bold bg-[#0008] text-[12px] w-[40px] flex justify-center items-center gap-1 text-center rounded-sm text-[var(--yellowColor)]">
                 <FaStar size={10} className="relative top-[-1px]" />
