@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { IoCloseSharp, IoHomeOutline, IoSearchSharp } from "react-icons/io5";
-import { MdMenuOpen } from "react-icons/md";
 import {
   RiMovie2Line,
   RiMovieAiLine,
@@ -35,12 +34,10 @@ const Nav = () => {
       }`}
     >
       <div className="container px-2 md:px-5 lg:px-20 mx-auto min-h-[72px] flex items-center justify-between">
-        <div
-          className="icon block lg:hidden"
-          onClick={() => setIsShow(!isShow)}
-        >
-          <MdMenuOpen className="text-[35px] cursor-pointer" />
-        </div>
+        <span className="block lg:hidden">
+          <FullscreenButton />
+        </span>
+
         <Link to={"/"} className="flex items-center gap-3">
           <img src="logo.png" className="w-[40px]" alt="" />
           <h2 className="text-3xl font-bold">
@@ -48,9 +45,7 @@ const Nav = () => {
           </h2>
         </Link>
         <ul
-          className={`flex transition-transform delay-200 gap-5 fixed z-40  lg:translate-x-[0] ${
-            isShow ? "translate-x-[0%]" : "translate-x-[100%]"
-          } lg:relative flex-col lg:flex-row top-[0px] h-[100vh] lg:h-[auto] right-0 bg-[#0c081cde] backdrop-blur-md lg:backdrop-blur-none lg:bg-transparent w-[300px] lg:w-[auto] justify-center lg:justify-normal px-5 lg:px-0`}
+          className={`flex transition-transform delay-200 gap-5 fixed z-40  lg:translate-x-[0]  lg:relative flex-col lg:flex-row top-[0px] h-[100vh] lg:h-[auto] right-0 lg:backdrop-blur-none lg:bg-transparent w-[300px] lg:w-[auto] justify-center lg:justify-normal px-5 lg:px-0`}
           onClick={(e) => e.stopPropagation()}
         >
           <span
@@ -143,9 +138,6 @@ const Nav = () => {
               size={25}
               className="text-[var(--yellowColor)] cursor-pointer"
             />
-          </span>
-          <span>
-            <FullscreenButton />
           </span>
         </div>
       </div>
