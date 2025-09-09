@@ -97,6 +97,7 @@ const Show = ({ name, URL }: IText) => {
             </h2>
           ) : (
             <Swiper
+              loop={true}
               breakpoints={{
                 0: {
                   slidesPerView: 3,

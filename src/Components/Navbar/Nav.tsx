@@ -45,7 +45,7 @@ const Nav = () => {
           </h2>
         </Link>
         <ul
-          className={`flex transition-transform delay-200 gap-5 fixed z-40 translate-x-[100%]  lg:translate-x-[0]  lg:relative flex-col lg:flex-row top-[0px] h-[100vh] lg:h-[auto] right-0 lg:backdrop-blur-none lg:bg-transparent w-[300px] lg:w-[auto] justify-center lg:justify-normal px-5 lg:px-0`}
+          className={`transition-transform delay-200 gap-5 hidden lg:flex`}
           onClick={(e) => e.stopPropagation()}
         >
           <span
