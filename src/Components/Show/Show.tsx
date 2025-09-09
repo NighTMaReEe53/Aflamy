@@ -78,8 +78,8 @@ const Show = ({ name, URL }: IText) => {
     <div className="show">
       <div className="container px-2  my-3 mx-auto">
         <div className="content bg-[#1c1a2f] p-4 rounded-md">
-          <div className="flex items-center justify-between">
-            <h2 className="text-2xl flex items-center mb-3 gap-2 font-bold">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-2xl flex items-center gap-2 font-bold">
               {name}
             </h2>
             <Link
