@@ -69,6 +69,16 @@
   }
 }
 
+@media(max-width:776px) {
+  .landing {
+    .box {
+      .text {
+        top: 40%;
+      }
+    }
+  }
+}
+
 .box::scroll-marker {
   content: "";
   width: 15px;
@@ -173,7 +183,8 @@
 }
 
 @media (max-width: 772px) {
-  .box:nth-child(7) {
+  .box:nth-child(7),
+  .box:nth-child(8) {
     h2 {
       font-size: 16px;
     }
