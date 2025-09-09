@@ -96,6 +96,24 @@ const Home = () => {
         }
         URL="https://api.themoviedb.org/3/discover/tv?include_adult=false&include_video=false&language=ar&page=1&sort_by=popularity.desc&with_original_language=ko&primary_release_year=2025"
       />
+      <Show
+        name={
+          <>
+            <GiFire className="text-[var(--yellowColor)]" />
+            أفلام تركي
+          </>
+        }
+        URL="https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=ar&page=1&sort_by=popularity.desc&with_original_language=tr&primary_release_year=2025"
+      />
+      <Show
+        name={
+          <>
+            <GiFire className="text-[var(--yellowColor)]" />
+            مسلسلات تركي
+          </>
+        }
+        URL="https://api.themoviedb.org/3/discover/tv?include_adult=false&include_video=false&language=ar&page=1&sort_by=popularity.desc&with_original_language=tr&primary_release_year=2025"
+      />
     </div>
   );
 };
