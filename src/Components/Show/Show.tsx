@@ -58,7 +58,7 @@ const Show = ({ name, URL }: IText) => {
                 src={`https://image.tmdb.org/t/p/original/${el.poster_path}`}
                 alt=""
                 draggable={false}
-                className="rounded-md w-[100%] min-h-[276px]"
+                className="rounded-md w-[100%] min-h-[225px]"
               />
               <span className="absolute top-[10px] left-[10px] font-bold bg-[#0008] text-[12px] w-[40px] flex justify-center items-center gap-1 text-center rounded-sm text-[var(--yellowColor)]">
                 <FaStar size={10} className="relative top-[-1px]" />
@@ -67,7 +67,7 @@ const Show = ({ name, URL }: IText) => {
               </span>
             </>
           ) : (
-            <div className="bg-[#FFF3] w-[100%] min-h-[276px] rounded-md animate-pulse"></div>
+            <div className="bg-[#FFF3] w-[100%] min-h-[225px] rounded-md animate-pulse"></div>
           )}
         </motion.div>
       </SwiperSlide>
@@ -99,15 +99,15 @@ const Show = ({ name, URL }: IText) => {
             <Swiper
               breakpoints={{
                 0: {
-                  slidesPerView: 2,
+                  slidesPerView: 3,
                   spaceBetween: 10,
                 },
                 640: {
-                  slidesPerView: 2,
+                  slidesPerView: 3,
                   spaceBetween: 10,
                 },
                 768: {
-                  slidesPerView: 2,
+                  slidesPerView: 3,
                   spaceBetween: 10,
                 },
                 922: {

@@ -1,6 +1,7 @@
 .show {
   .box {
     transition: 0.3s ease-in;
+    flex: 0 0 150px;
     &:active {
       scale: 0.95;
     }
@@ -15,5 +16,12 @@
       bottom: 0;
       transition: 0.2s ease-in;
     }
+  }
+}
+
+@media(max-width:772px) {
+  .box {
+    flex: 0 0 120px;
+
   }
 }
