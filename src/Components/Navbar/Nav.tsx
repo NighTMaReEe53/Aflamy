@@ -9,6 +9,7 @@ import {
   RiUserFollowLine,
 } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import { FullscreenButton } from "../UI/FullScreen";
 
 const Nav = () => {
   const [isShow, setIsShow] = useState<boolean>(false);
@@ -142,6 +143,9 @@ const Nav = () => {
               size={25}
               className="text-[var(--yellowColor)] cursor-pointer"
             />
+          </span>
+          <span>
+            <FullscreenButton />
           </span>
         </div>
       </div>
