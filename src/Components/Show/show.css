@@ -1,4 +1,7 @@
 .show {
+  &:last-child {
+    margin-bottom: 90px;
+  }
   .box {
     transition: 0.3s ease-in;
     flex: 0 0 150px;
@@ -19,9 +22,8 @@
   }
 }
 
-@media(max-width:772px) {
+@media (max-width: 772px) {
   .box {
     flex: 0 0 120px;
-
   }
 }
