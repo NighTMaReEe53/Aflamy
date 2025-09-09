@@ -40,7 +40,7 @@ const Home = () => {
             مسلسلات عربية
           </>
         }
-        URL="https://api.themoviedb.org/3/discover/tv?with_origin_country=EG&language=ar"
+        URL="https://api.themoviedb.org/3/discover/tv?with_origin_country=EG&language=ar&primary_release_year=2025&page=1"
       />
       <Show
         name={
